@@ -1,0 +1,164 @@
+Database Tables:
+/*
+SQLyog Community Edition- MySQL GUI v5.22a
+Host - 5.0.19-nt : Database - virtualclassroom
+*********************************************************************
+Server version : 5.0.19-nt
+*/ 
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+create database if not exists `virtualclassroom`;
+
+USE `virtualclassroom`;
+
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+/*Table structure for table `admin` */
+
+DROP TABLE IF EXISTS `admin`;
+
+CREATE TABLE `admin` (
+  `uname` varchar(100) default NULL,
+  `pass` varchar(100) default NULL,
+  `image` varchar(100) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `admin` */
+
+insert  into `admin`(`uname`,`pass`,`image`) values ('a','a',NULL);
+
+/*Table structure for table `auto_gen_id` */
+
+DROP TABLE IF EXISTS `auto_gen_id`;
+
+CREATE TABLE `auto_gen_id` (
+  `form_name` varchar(100) NOT NULL default '',
+  `prefix_id` varchar(50) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `auto_gen_id` */
+
+insert  into `auto_gen_id`(`form_name`,`prefix_id`) values ('vendor','Vendor-00002'),('client','Client-00002'),('product','P-00003'),('citizen','Citizen-00001'),('payment','DRAFT-00005'),('Offer','Offer-00004'),('stu','STU-00002'),('doc','Doc-00002'),('id','Dis-00003'),('dis','Dis-00004'),('tea','Tea-00001');
+
+/*Table structure for table `chatting` */
+
+DROP TABLE IF EXISTS `chatting`;
+
+CREATE TABLE `chatting` (
+  `id` varchar(100) default NULL,
+  `sid` varchar(100) default NULL,
+  `mess` varchar(100) default NULL,
+  `date` varchar(100) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `chatting` */
+
+insert  into `chatting`(`id`,`sid`,`mess`,`date`) values ('dfd','puja','sdfsd','2014-03-24 17:35:36'),('puja','dfd','dsafsafd','2014-03-24 17:39:12');
+
+/*Table structure for table `comment` */
+
+DROP TABLE IF EXISTS `comment`;
+
+CREATE TABLE `comment` (
+  `id` varchar(100) default NULL,
+  `comment` varchar(1000) default NULL,
+  `by1` varchar(100) default NULL,
+  `date` varchar(100) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `comment` */
+
+insert  into `comment`(`id`,`comment`,`by1`,`date`) values ('ID-00002','ccx xcxc  xccccccccccccccccccccccccccccccccc','nm','2011-11-16 18:11:45'),('ID-00001','fdfdf','nm','2011-11-16 18:12:13'),('ID-00002','ol,','nm','2011-11-16 18:12:45'),('ID-00002','ghgh','nm','2011-11-16 18:19:25'),('ID-00003','11111111','nm','2011-11-16 18:21:16'),('ID-00002','zxczxz','nm','2011-11-16 18:28:08'),('ID-00004','cvcvc','nm','2011-11-16 18:41:51'),('ID-00004','fghfgf','nm','2011-11-16 18:42:03'),('ID-00003','hgfh','a','2011-11-16 18:58:10'),('ID-00004','vb ','a','2011-11-16 18:58:27'),('ID-00005','java is googd book','puja','2011-11-17 19:19:56'),('ID-00004','fgfgfg','puja','2011-11-19 01:04:42'),('ID-00005','rfgtuhjnkm,','a','2011-11-19 01:36:51'),('ID-00004','TEACHER','dfd','2011-11-19 01:37:33'),('Dis-00003','ghjk,l','dfd','2011-11-19 22:31:17');
+
+/*Table structure for table `course` */
+
+DROP TABLE IF EXISTS `course`;
+
+CREATE TABLE `course` (
+  `id` varchar(100) default NULL,
+  `name` varchar(100) default NULL,
+  `dis` varchar(100) default NULL,
+  `file1` mediumtext,
+  `file2` mediumtext,
+  `file3` mediumtext,
+  `file4` mediumtext,
+  `date` varchar(100) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `course` */
+
+insert  into `course`(`id`,`name`,`dis`,`file1`,`file2`,`file3`,`file4`,`date`) values ('Doc-00002','kk','hjhj','UserImage_1321770287703.jpg','UserImage_1321770287703.jpg','UserImage_1321770287703.mp3','UserImage_1321770287703.doc','2011-11-19 22:24:48'); 
+
+/*Table structure for table `dcomment` */
+
+DROP TABLE IF EXISTS `dcomment`;
+
+CREATE TABLE `dcomment` (
+  `id` varchar(100) default NULL,
+  `comment` varchar(100) default NULL,
+  `by1` varchar(100) default NULL,
+  `date` varchar(100) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `dcomment` */
+
+insert  into `dcomment`(`id`,`comment`,`by1`,`date`) values ('Dis-00001','dfdfd','puja','2011-11-19 00:55:04'),('Dis-00001','dfdf','puja','2011-11-19 00:57:48'),('Dis-00002','java is languasges.','nm','2011-11-19 01:01:51'),('Dis-00002','java is programming','puja','2011-11-19 01:03:33'),('Dis-00002','fdfdf df dfadmin','puja','2011-11-19 01:10:46'),('Dis-00002','fdfdf df dfadmin','puja','2011-11-19 01:12:01'),('Dis-00003','dfd admin','a','2011-11-19 01:13:12'),('Dis-00002',' df df f df df ','a','2011-11-19 01:14:04'),('Dis-00003','df fd','a','2011-11-19 01:15:39'),('Dis-00002','BY TEACHER','a','2011-11-19 01:37:57'),('Dis-00002','GD','a','2011-11-19 01:39:04'),('Dis-00001','CBBBBBBBBBBBB','dfd','2011-11-19 01:39:30'),('Dis-00003','mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm','null','2011-11-19 21:42:01'),('Dis-00004','big issue','puja','2014-03-20 17:38:00');
+
+/*Table structure for table `discustion` */
+
+DROP TABLE IF EXISTS `discustion`;
+
+CREATE TABLE `discustion` (
+  `id` varchar(100) default NULL,
+  `title` varchar(100) default NULL,
+  `by1` varchar(100) default NULL,
+  `date` varchar(100) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `discustion` */
+
+insert  into `discustion`(`id`,`title`,`by1`,`date`) values ('Dis-00001','dsdsd dsds','puja','2011-11-19 00:48:03'),('Dis-00002','what is java.','nm','2011-11-19 01:01:30'),('Dis-00003','dfdf dfd ','puja','2011-11-19 01:04:59'),('Dis-00004','women Security','puja','2014-03-20 17:37:45');
+
+/*Table structure for table `item` */
+
+DROP TABLE IF EXISTS `item`;
+
+CREATE TABLE `item` (
+  `id` varchar(100) default NULL,
+  `type` varchar(1000) default NULL,
+  `title` varchar(100) default NULL,
+  `Image` mediumtext,
+  `date` varchar(100) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `item` */
+
+insert  into `item`(`id`,`type`,`title`,`Image`,`date`) values ('ID-00001','EBooks','kjkm','UserImage_1321494445890.jpg','2011-11-16 17:47:25'),('ID-00002','EBooks','kjkm','UserImage_1321494488578.jpg','2011-11-16 17:48:08'),('ID-00003','Notes','12232','UserImage_1321494754500.docx','2011-11-16 17:52:34'),('ID-00004','EBooks','zzd','UserImage_1321496912921.gif','2011-11-16 18:28:32'),('ID-00005','EBooks','java','UserImage_1321586369343.doc','2011-11-17 19:19:29'),('Dis-00003','EBooks','gjh','UserImage_1321693340765.jpg','2011-11-19 01:02:20');
+
+/*Table structure for table `signup` */
+
+DROP TABLE IF EXISTS `signup`;
+
+CREATE TABLE `signup` (
+  `UserID` varchar(50) NOT NULL default '',
+  `uname` varchar(50) NOT NULL default '',
+  `pass` varchar(50) default NULL,
+  `FirstName` varchar(100) default NULL,
+  `LastName` varchar(100) default NULL,
+  `Gender` varchar(25) default NULL,
+  `DOB` varchar(25) default NULL,
+  `ContactNo` varchar(15) default NULL,
+  `EmailID` varchar(100) default NULL,
+  `Address` varchar(200) default NULL,
+  `City` varchar(100) default NULL,
+  `PinCode` varchar(10) default NULL,
+  `State` varchar(100) default NULL,
+  `Country` varchar(100) default NULL,
+  `image` varchar(500) default NULL,
+  `status` varchar(100) default 'false'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
